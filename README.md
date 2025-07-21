@@ -1,109 +1,138 @@
-# 📊 Amazon E-Commerce Product Analysis & Customer Review Sentiment Analysis
+# 🛒 Amazon Sales Data Analysis 📊
 
-This project is an end-to-end exploratory data analysis (EDA) of Amazon product listings and customer reviews. It includes data cleaning, insightful visualizations, and sentiment analysis using NLP to uncover key insights for business decisions.
-
----
-
-## 🧠 Problem Statement
-
-With the increasing volume of e-commerce data, understanding product trends, pricing strategies, and customer sentiment is crucial for sellers to optimize listings and increase sales. This project explores these aspects through real Amazon product and review data.
+This project performs an in-depth exploratory data analysis (EDA) on an Amazon Sales dataset to uncover patterns in customer purchases, product sales performance, and geographical trends. The insights derived can aid in decision-making for marketing, inventory, and logistics.
 
 ---
 
 ## 📁 Dataset Overview
 
-The dataset contains:
+The dataset contains detailed transaction records of Amazon products. Each row represents a sale and includes:
 
-- Product information like ID, category, pricing, ratings
-- Customer reviews including titles and content
-- Product metadata like image and product links
-
-🧾 **Key Columns:**
-- `product_name`, `category`, `discounted_price`, `actual_price`, `rating`, `review_content`, `user_name`
-- Engineered columns: `sentiment`, `price_diff`, `review_length`, `word_count`
-
----
-
-## 🧼 Data Cleaning
-
-- Removed null and duplicate values
-- Handled inconsistent price and rating formats
-- Filtered unnecessary columns for clarity
-
----
-
-## 📊 Exploratory Data Analysis
-
-- 📌 **Top Categories** and **Most Reviewed Products**
-- 📈 Price Distribution, Rating Trends
-- 🔄 Discount % and its relation with Ratings
-- 📉 Sentiment distribution by product category
-- 📝 Review length vs rating correlation
+| Column Name    | Description                           |
+| -------------- | ------------------------------------- |
+| `order_id`     | Unique identifier for each order      |
+| `product_id`   | Unique identifier for each product    |
+| `product_name` | Name/title of the product             |
+| `category`     | Category to which the product belongs |
+| `sub_category` | Sub-category of the product           |
+| `price`        | Price of the product                  |
+| `quantity`     | Quantity of the product ordered       |
+| `order_date`   | Date of the order                     |
+| `ship_date`    | Date when the product was shipped     |
+| `customer_id`  | Unique identifier for each customer   |
+| `region`       | Geographic region of the customer     |
+| `state`        | State where the product was ordered   |
+| `profit`       | Profit made on the sale               |
+| `sales`        | Total sales revenue from the order    |
 
 ---
 
-## 💬 Sentiment Analysis (TextBlob)
+## 🧪 Objective
 
-- Polarity and Subjectivity scores extracted
-- Reviews labeled as `Positive`, `Negative`, or `Neutral`
-- Built sentiment categories using thresholds
-
----
-
-## 📐 Feature Engineering
-
-- `price_diff`: actual - discounted price
-- `review_length`: character count of review
-- `word_count`: number of words in review
+* Discover high-selling products and profitable categories.
+* Understand regional demand and performance.
+* Track shipping delays or shipping trends.
+* Identify patterns between profit, sales, and product type.
 
 ---
 
-## 📊 Visualizations
+## 🧾 Key EDA Insights
 
-- Heatmaps of correlations
-- Boxplots of ratings by category
-- Distribution plots for price, ratings, sentiments
-- Word clouds for positive and negative reviews (optional future addition)
+* **Top Performing Categories:** \[e.g., Electronics and Books drive the most profit]
+* **Profitability vs Sales:** \[Some products have high sales but low or negative profit]
+* **Regional Analysis:** \[Southern and Western regions lead in sales volume]
+* **Shipping Delays:** \[Delayed orders observed mostly in X and Y states]
 
----
-
-## 📈 Business Insights
-
-- High-discount products don't always yield better ratings
-- Longer reviews often reflect stronger sentiments
-- Certain categories consistently receive higher sentiments
+*Visualizations were created using Matplotlib, Seaborn, and Plotly.*
 
 ---
 
-## 🚀 Future Work
+## 📊 Dashboard (Power BI)
 
-- 📌 Build a **Power BI dashboard** for:
-  - Category-wise rating and price comparison
-  - Real-time review sentiment monitoring
-  - Discount vs Rating impact
-- 🧠 Use advanced NLP (like VADER or BERT) for improved sentiment accuracy
-- 📦 Recommendation system using collaborative filtering
+A dynamic **Power BI dashboard** was created to visualize:
+
+* Total Sales, Profit, and Quantity metrics
+* Category-wise and Sub-category trends
+* Monthly and regional analysis
+* Profit vs Sales scatter plots
+* Filters for interactive exploration
+
+🚧 *\[Upload your `.pbix` file or embed a link/screenshot here]*
+📍 *If hosted publicly, provide a link to the live dashboard or video walkthrough.*
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python (Pandas, Seaborn, Matplotlib, TextBlob)
-- Jupyter Notebook
-- Power BI (dashboard coming soon!)
+* **Python**: Data analysis and preprocessing
+* **Libraries**: `pandas`, `matplotlib`, `seaborn`, `plotly`
+* **Power BI**: Interactive dashboard
+* **Jupyter Notebook**: Code execution environment
 
 ---
 
-## 🏁 Outcomes
+## 📂 Project Structure
 
-- Improved understanding of product performance and customer feedback
-- Actionable insights for pricing, promotion, and category focus
-- A strong addition to data analytics portfolio
+```bash
+amazon-sales-analysis/
+│
+├── data/
+│   └── amazon_sales.csv
+│
+├── eda/
+│   └── amazon_sales_eda.ipynb
+│
+├── dashboard/
+│   └── amazon_sales_dashboard.pbix
+│
+├── images/
+│   └── profit_vs_sales.png
+│   └── category_sales.png
+│
+├── README.md
+└── requirements.txt
+```
 
 ---
 
-## 🙋 Author
+## 📷 Sample Visualizations
 
-**Sreeja Mondal**  
-Data Analyst | AI and ML Enthusiast | IIIT Kalyani  
+<p float="left">
+  <img src="images/category_sales.png" width="45%" />
+  <img src="images/profit_vs_sales.png" width="45%" />
+</p>
 
+---
+
+## 🧠 Future Scope
+
+* Predict future sales using time series models
+* Implement product recommendation engine
+* Customer segmentation using clustering (e.g., K-Means)
+
+---
+
+## 📌 How to Use
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/amazon-sales-analysis.git
+   ```
+
+2. Open the notebook:
+
+   ```bash
+   jupyter notebook eda/amazon_sales_eda.ipynb
+   ```
+
+3. Run each cell to reproduce the analysis.
+
+4. Open the `.pbix` file using Power BI Desktop to explore the dashboard.
+
+---
+
+## 👤 Author
+
+**Sreeja Mondal**
+IIIT Kalyani
