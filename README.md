@@ -61,7 +61,7 @@ A dynamic **Power BI dashboard** was created to visualize:
 
 ## 📊 Power BI Dashboard Preview
 
-![Dashboard]("C:\Users\Sreeja Mondal\Pictures\Screenshots\Screenshot 2025-07-24 004015.png")
+![Dashboard](https://github.com/mSreeja12/Amazon-E-Commerce-Product-Analysis-Customer-Review-Sentiment-Analysis/blob/main/Dashboard.png?raw=true)
 
 ---
 
