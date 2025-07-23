@@ -57,8 +57,11 @@ A dynamic **Power BI dashboard** was created to visualize:
 * Profit vs Sales scatter plots
 * Filters for interactive exploration
 
-🚧 *\[Upload your `.pbix` file or embed a link/screenshot here]*
-📍 *If hosted publicly, provide a link to the live dashboard or video walkthrough.*
+---
+
+## 📊 Power BI Dashboard Preview
+
+![Dashboard]("C:\Users\Sreeja Mondal\Pictures\Screenshots\Screenshot 2025-07-24 004015.png")
 
 ---
 
